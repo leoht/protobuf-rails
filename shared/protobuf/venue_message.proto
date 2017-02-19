@@ -1,0 +1,19 @@
+// shared/protobuf/venue_message.proto
+
+syntax = "proto3";
+
+import "artist_message.proto";
+
+message VenueMessage {
+  // we can define nested message types
+  message LocationMessage {
+    string country = 1;
+    string city    = 2;
+    string place   = 3;
+  }
+
+  int32  id                = 1;
+  ArtistMessage artist     = 2;
+  LocationMessage location = 3;
+  string venue_date        = 4;
+}

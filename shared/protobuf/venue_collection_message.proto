@@ -1,0 +1,8 @@
+// shared/protobuf/venue_collection_message.proto
+
+syntax = "proto3";
+import "venue_message.proto";
+
+message VenueCollectionMessage {
+  repeated VenueMessage artists = 1;
+}
